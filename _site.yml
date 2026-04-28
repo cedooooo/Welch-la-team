@@ -1,0 +1,8 @@
+name: "site-sig"
+output_dir: "docs"
+
+navbar:
+  title: "Projet SIG"
+  left:
+    - text: "Accueil"
+      href: script1.html

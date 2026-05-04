@@ -2,7 +2,27 @@ name: "site-sig"
 output_dir: "docs"
 
 navbar:
-  title: "Projet SIG"
+
+  title: "Risques industriels et inégalités"
+
   left:
-    - text: "Accueil"
-      href: script1.html
+
+    - text: "Introduction"
+
+      href: index.html
+
+    - text: "Données"
+
+      href: donnee.html
+
+    - text: "Méthodologie"
+
+      href: methodologie.html
+
+    - text: "Résultats"
+
+      href: resultat.html
+
+    - text: "Conclusion"
+
+      href: conclusion.html

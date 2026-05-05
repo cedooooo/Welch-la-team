@@ -9,7 +9,7 @@ navbar:
 
     - text: "Introduction"
 
-      href: index.html
+      href: introduction.html
 
     - text: "Données"
 

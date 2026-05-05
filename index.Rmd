@@ -1,5 +1,5 @@
 ---
-title: "script1"
+title: "Introduction"
 author: "Cédric et Romane"
 date: "2026-04-28"
 output: html_document
@@ -9,35 +9,21 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Objet
+La ville de Dunkerque, ville la plus septentrionale de France concentre plus de 85 000 habitants. Située sur le littoral de la mer du Nord, la ville de Dunkerque constitue l’un des principaux pôles industrialo-portuaires de France. Arcelormittal, usines liées à la transformation des matières premières, métallurgie, les usines émettrices de GES sont nombreuses et le transport des matières ou des produits est également dangeux et très émetteur de GES. S’ajoutent à ces industries le poids de la centrale nucléaire Gravelines. Ces activités industrielles, bien qu’essentielles à l’économie locale, sont également à l’origine de risques environnementaux et technologiques.
 
-Présenter un premier script et l'intégration d'une image (carte)
+Par ailleurs, le territoire dunkerquois présente une forte diversité socio-démographique, avec des contrastes marqués entre les quartiers en termes de niveau de vie. Dans ce contexte, la question des différent niveau d'exposition des populations aux risques industriels se pose, et des questionnement d’inégalités socio-spatiales.
 
-# Librairies
+# Problématique
 
-```{r}
-library(sf)
-library(mapsf)
-```
+Dans quelle mesure les risques industriels influencent-ils la répartition socio-spatiale des populations à Dunkerque, et contribuent-ils à accentuer les inégalités socio-démographiques ?
 
-# Données
+# Objectifs
 
-```{r}
-library(sf)
-world <- st_as_sf(maps::map("world", plot = FALSE, fill = TRUE))
-```
+L’objectif de cette étude est d’analyser les relations entre la localisation des installations industrielles à risque et les caractéristiques socio-démographiques des populations dunkerquoises. On va notamment identifier si les populations les plus modestes sont davantage exposées à ces risques.
 
-commune et carreau
+Pour cela, une analyse spatiale sera réalisée en croisant des données géographiques (localisation des industries, limites administratives) et des données statistiques (niveau de vie des populations), afin de démontrer si il y a bien des inégalités socio-spatiales du fait des industries ou non.
 
 ```{r}
 ```
 
-# Cartograhie
 
-```{r}
-png("carte.png")
-plot(world["ID"])
-dev.off()
-```
-
-![](carte.png)

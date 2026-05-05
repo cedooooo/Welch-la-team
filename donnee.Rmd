@@ -1,5 +1,5 @@
 ---
-title: "donnee.Rdm"
+title: "Données"
 author: "Cédric et Romane"
 date: "2026-05-04"
 output: html_document
@@ -9,22 +9,37 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+Cette étude repose sur plusieurs jeux de données géographiques et statistiques permettant d’analyser les relations entre risques industriels et inégalités socio-démographiques à Dunkerque.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Données vectorielles
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Les données vectorielles utilisées comprennent :
 
-```{r cars}
-summary(cars)
-```
+- Les limites administratives des communes (format shapefile), permettant de délimiter la zone d’étude ;
+- La localisation des installations industrielles à risque, issues de la base de données Géorisques.
 
-## Including Plots
+Ces données sont de nature géographique et permettent de représenter spatialement les éléments étudiés (polygones pour les communes, points pour les industries).
 
-You can also embed plots, for example:
+## Données socio-économiques
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+Les données socio-économiques proviennent de l’INSEE et concernent le niveau de vie médian des populations à l’échelle des quartiers.
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Ces données, au format CSV, sont quantitatives continues et permettent d’analyser les inégalités de revenus sur le territoire étudié.
+
+## Nature des données
+
+Les données mobilisées sont de plusieurs types :
+
+- Données vectorielles : communes et installations industrielles ;
+- Données attributaires : revenus des populations ;
+- Données quantitatives : niveau de vie médian ;
+- Données qualitatives : type d’installations industrielles.
+
+Cette diversité de données permet de croiser des informations spatiales et statistiques dans une analyse SIG.
+
+## Sources des données
+
+- INSEE : revenus, pauvreté et niveau de vie ;
+- Géorisques : installations industrielles et rejets polluants ;
+- Cadastre / données administratives : limites des communes.
+

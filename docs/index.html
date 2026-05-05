@@ -13,7 +13,7 @@
 
 <meta name="date" content="2026-04-28" />
 
-<title>script1</title>
+<title>Introduction</title>
 
 <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -240,7 +240,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Risques industriels et inégalités</a>
+      <a class="navbar-brand" href="index.html">Risques industriels et inégalités à Dunkerque</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -268,36 +268,46 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">script1</h1>
+<h1 class="title toc-ignore">Introduction</h1>
 <h4 class="author">Cédric et Romane</h4>
 <h4 class="date">2026-04-28</h4>
 
 </div>
 
 
-<div id="objet" class="section level1">
-<h1>Objet</h1>
-<p>Présenter un premier script et l’intégration d’une image (carte)</p>
+<p>La ville de Dunkerque, ville la plus septentrionale de France
+concentre plus de 85 000 habitants. Située sur le littoral de la mer du
+Nord, la ville de Dunkerque constitue l’un des principaux pôles
+industrialo-portuaires de France. Arcelormittal, usines liées à la
+transformation des matières premières, métallurgie, les usines
+émettrices de GES sont nombreuses et le transport des matières ou des
+produits est également dangeux et très émetteur de GES. S’ajoutent à ces
+industries le poids de la centrale nucléaire Gravelines. Ces activités
+industrielles, bien qu’essentielles à l’économie locale, sont également
+à l’origine de risques environnementaux et technologiques.</p>
+<p>Par ailleurs, le territoire dunkerquois présente une forte diversité
+socio-démographique, avec des contrastes marqués entre les quartiers en
+termes de niveau de vie. Dans ce contexte, la question des différent
+niveau d’exposition des populations aux risques industriels se pose, et
+des questionnement d’inégalités socio-spatiales.</p>
+<div id="problématique" class="section level1">
+<h1>Problématique</h1>
+<p>Dans quelle mesure les risques industriels influencent-ils la
+répartition socio-spatiale des populations à Dunkerque, et
+contribuent-ils à accentuer les inégalités socio-démographiques ?</p>
 </div>
-<div id="librairies" class="section level1">
-<h1>Librairies</h1>
-<pre class="r"><code>library(sf)
-library(mapsf)</code></pre>
-</div>
-<div id="données" class="section level1">
-<h1>Données</h1>
-<pre class="r"><code>library(sf)
-world &lt;- st_as_sf(maps::map(&quot;world&quot;, plot = FALSE, fill = TRUE))</code></pre>
-<p>commune et carreau</p>
-</div>
-<div id="cartograhie" class="section level1">
-<h1>Cartograhie</h1>
-<pre class="r"><code>png(&quot;carte.png&quot;)
-plot(world[&quot;ID&quot;])
-dev.off()</code></pre>
-<pre><code>## quartz_off_screen 
-##                 2</code></pre>
-<p><img src="carte.png" /></p>
+<div id="objectifs" class="section level1">
+<h1>Objectifs</h1>
+<p>L’objectif de cette étude est d’analyser les relations entre la
+localisation des installations industrielles à risque et les
+caractéristiques socio-démographiques des populations dunkerquoises. On
+va notamment identifier si les populations les plus modestes sont
+davantage exposées à ces risques.</p>
+<p>Pour cela, une analyse spatiale sera réalisée en croisant des données
+géographiques (localisation des industries, limites administratives) et
+des données statistiques (niveau de vie des populations), afin de
+démontrer si il y a bien des inégalités socio-spatiales du fait des
+industries ou non.</p>
 </div>
 
 

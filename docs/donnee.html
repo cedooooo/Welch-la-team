@@ -13,7 +13,7 @@
 
 <meta name="date" content="2026-05-04" />
 
-<title>donnee.Rdm</title>
+<title>Données</title>
 
 <script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -240,7 +240,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Risques industriels et inégalités</a>
+      <a class="navbar-brand" href="index.html">Risques industriels et inégalités à Dunkerque</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -268,39 +268,57 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">donnee.Rdm</h1>
+<h1 class="title toc-ignore">Données</h1>
 <h4 class="author">Cédric et Romane</h4>
 <h4 class="date">2026-05-04</h4>
 
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com"
-class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<p>Cette étude repose sur plusieurs jeux de données géographiques et
+statistiques permettant d’analyser les relations entre risques
+industriels et inégalités socio-démographiques à Dunkerque.</p>
+<div id="données-vectorielles" class="section level2">
+<h2>Données vectorielles</h2>
+<p>Les données vectorielles utilisées comprennent :</p>
+<ul>
+<li>Les limites administratives des communes (format shapefile),
+permettant de délimiter la zone d’étude ;</li>
+<li>La localisation des installations industrielles à risque, issues de
+la base de données Géorisques.</li>
+</ul>
+<p>Ces données sont de nature géographique et permettent de représenter
+spatialement les éléments étudiés (polygones pour les communes, points
+pour les industries).</p>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="donnee_files/figure-html/pressure-1.png" alt="" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
+<div id="données-socio-économiques" class="section level2">
+<h2>Données socio-économiques</h2>
+<p>Les données socio-économiques proviennent de l’INSEE et concernent le
+niveau de vie médian des populations à l’échelle des quartiers.</p>
+<p>Ces données, au format CSV, sont quantitatives continues et
+permettent d’analyser les inégalités de revenus sur le territoire
+étudié.</p>
+</div>
+<div id="nature-des-données" class="section level2">
+<h2>Nature des données</h2>
+<p>Les données mobilisées sont de plusieurs types :</p>
+<ul>
+<li>Données vectorielles : communes et installations industrielles
+;</li>
+<li>Données attributaires : revenus des populations ;</li>
+<li>Données quantitatives : niveau de vie médian ;</li>
+<li>Données qualitatives : type d’installations industrielles.</li>
+</ul>
+<p>Cette diversité de données permet de croiser des informations
+spatiales et statistiques dans une analyse SIG.</p>
+</div>
+<div id="sources-des-données" class="section level2">
+<h2>Sources des données</h2>
+<ul>
+<li>INSEE : revenus, pauvreté et niveau de vie ;</li>
+<li>Géorisques : installations industrielles et rejets polluants ;</li>
+<li>Cadastre / données administratives : limites des communes.</li>
+</ul>
 </div>
 
 

@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Cette étude repose principalement sur 3 jeux de données géographiques et statistiques permettant d’analyser les relations entre risques industriels et inégalités socio-démographiques à Dunkerque.
+Cette étude s’appuie sur trois jeux de données géographiques et statistiques afin d’analyser les relations entre organisation industrielle et disparités socio-économiques à Dunkerque.
 
 ## Données vectorielles
 

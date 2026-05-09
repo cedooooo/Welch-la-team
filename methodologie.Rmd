@@ -11,9 +11,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ![](CI/LEG.png)
 *Légende pour les Schémas de géo-traitement ci-dessous*
 
+---
+
 ## Préparation des données
 
 Les différentes données utilisées dans cette étude proviennent de sources hétérogènes (cadastre, INSEE, OSM). L’ensemble des couches a été reprojeté dans un système de coordonnées commun (Lambert-93, EPSG:2154), pour garantir la cohérence des géo-traitement et des analyses.
+
+---
 
 ## Traitement des données industrielles
 
@@ -23,6 +27,8 @@ Les données industrielles issues d’OpenStreetMap ont été transformées afin
 
 Les polygones représentant les sites industriels ont été convertis en centroïdes pour simplifier leur localisation ponctuelle. Cette transformation permet une meilleure intégration dans les analyses de proximité et de densité.
 
+---
+
 ## Traitement des données de revenus
 
 ![](CI/SGT_carte_rev.png)
@@ -30,6 +36,8 @@ Les polygones représentant les sites industriels ont été convertis en centro�
 Les données de revenus issues de l’INSEE ont été intégrées sous forme de carroyage statistique.
 
 Une transformation du système de coordonnées a été réalisée afin de les harmoniser avec les autres couches spatiales. Ces données ont ensuite été utilisées pour analyser la distribution des niveaux de vie sur le territoire de Dunkerque.
+
+---
 
 ## Analyses spatiales
 
@@ -45,6 +53,8 @@ Les zones d’influence des industries ont été modélisées à l’aide de buf
 
 Une analyse de densité a été réalisée en rasterisant les points industriels pour mettre en évidence les zones de concentration.
 
+---
+
 ## Analyse croisée des revenus et des industries
 
 ![](CI/ACC.png)
@@ -58,6 +68,8 @@ Deux approches ont été utilisées :
 * une analyse par intersection spatiale (présence dans l’environnement industriel)
 
 Ces traitements ont permis de comparer les niveaux de revenus selon l’exposition aux zones industrielles.
+
+---
 
 ## Analyse par jointure spatiale
 

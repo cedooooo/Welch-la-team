@@ -11,6 +11,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Cette étude s’appuie sur trois jeux de données géographiques et statistiques afin d’analyser les relations entre organisation industrielle et disparités socio-économiques à Dunkerque.
 
+---
+
 ## Données vectorielles
 
 Les données vectorielles utilisées comprennent :
@@ -95,6 +97,8 @@ plot(st_geometry(industries_points), add = TRUE, col = "red", pch = 20)
 
 </details>
 
+---
+
 ## Données statistiques socio-économiques
 
 Les données socio-économiques de revenus proviennent de l’INSEE, concernent le niveau de vie médian des populations à l’échelle des quartiers et sont initialement fournies sous forme de tableau CSV. Il s’agit de données attributaires qui étaient fournies sous forme de carroyage déjà géoréférencé.
@@ -164,6 +168,8 @@ legend("bottomleft",
 ```
 
 </details>
+
+---
 
 ## Liens vers les données
 

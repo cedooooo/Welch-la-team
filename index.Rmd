@@ -39,10 +39,13 @@ Par ailleurs, le territoire dunkerquois présente une forte diversité socio-dé
 ![](CI/loc_indus.png)
 *Localisation des industries dans Dunkerque*
 
+---
 
 ## Problématique
 
 Dans quelle mesure la proximité des zones industrielles influence-t-elle la répartition spaciale des revenues des populations dunkerquoises, et contribuent-ils à accentuer les inégalités socio-démographiques ?
+
+---
 
 ## Objectifs
 

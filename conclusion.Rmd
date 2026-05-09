@@ -11,14 +11,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Cette étude visait à répondre à la problématique suivante : *Dans quelle mesure la proximité des zones industrielles influence-t-elle la répartition spaciale des revenues des populations dunkerquoises, et contribuent-ils à accentuer les inégalités socio-démographiques ?*
 
+---
+
+#### Réponse à la problématique
+
 Les différentes analyses de géo-traitements et de statistiques, montre une relation géographique entre la présence industrielle et le niveau de vie. Les résultats montrent que les secteurs situés à proximité d’au moins une industrie présentent en moyenne un revenu inférieur d’environ 2 240 € par habitant, soit une baisse relative d’environ 9 % par rapport aux secteurs plus éloignés.
 
 Avec ces résultats on voit que la proximité industrielle est un facteur spatial potentiellement associé aux contrastes socio-économiques sur le territoire dunkerquois. Au-delà de la seule question des revenus, les résultats suggèrent également que la proximité des zones industrielles pourrait contribuer à renforcer certaines inégalités socio-spatiales au sein de la commune. En concentrant des populations aux niveaux de vie plus modestes dans certains secteurs, ces espaces industriels semblent participer à une forme de différenciation territoriale, pouvant accentuer les contrastes socio-démographiques à l’échelle locale.
+
+---
+
+#### Limites et perspectives
 
 Cependant, cette étude présente plusieurs limites. Tout d’abord, l’analyse repose sur une approche très spatiale et descriptive car elle montre une corrélation, mais ne permet pas d’établir un lien de causalité direct entre l'activité industrielle et le niveau de vie. D’autres variables explicatives pourraient intervenir, comme la structure du marché immobilier, la qualité environnementale, les réseaux de transport ou encore les politiques d’aménagement urbain.
 
 Par ailleurs, les données utilisées présentent certaines limites d’échelle et de précision. Le recours au carroyage statistique implique une agrégation des données qui peut masquer des disparités plus fines à l’échelle infra-quartier. De même, la représentation des industries par leurs centroïdes simplifie la réalité spatiale des emprises industrielles.
 
 Avec davantage de temps et de moyens, il serait pertinent d’approfondir cette étude par des analyses statistiques plus avancées, par l’intégration de nouvelles variables socio-environnementales (pollution, accessibilité, foncier), ou encore par une comparaison avec d’autres territoires industriels français afin de comparer Dunkerque à des villes semblables.
+
+---
+
+#### Ouverture
 
 Enfin, ce travail ouvre une réflexion plus générale sur les relations entre l'héritage industriel  et les inégalités terrioriales. Il montre aussi l’intérêt des SIG et de la géomatique pour comprendre les dynamiques socio-spatiales et accompagner les décisions d’aménagement du territoire.

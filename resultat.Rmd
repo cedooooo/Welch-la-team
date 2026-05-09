@@ -13,6 +13,8 @@ Les analyses réalisées permettent d’identifier l’organisation spatiale des
 
 Les sites industriels apparaissent fortement concentrés dans certains secteurs de la commune, traduisant une structuration spatiale marquée de l’activité industrielle. Cette concentration suggère l’existence de pôles économiques spécialisés, probablement liés à l’histoire portuaire et industrielle de Dunkerque.
 
+---
+
 ## Zones d’influence des industries
 
 ![](CI/buf.png)
@@ -47,6 +49,8 @@ plot(st_geometry(industries_pts),
 
 </details>
 
+---
+
 ## Densité industrielle
 
 ![](CI/rast_dens_indus.png)
@@ -79,6 +83,8 @@ plot(st_geometry(industries_2154),
 ```
 
 </details>
+
+---
 
 ## Revenus et proximité industrielle
 
@@ -136,6 +142,8 @@ legend("bottomleft",
 
 </details>
 
+---
+
 ## Joiture
 
 ![](CI/jointure.png)
@@ -178,6 +186,8 @@ legend("bottomleft",
 ```
 
 </details>
+
+---
 
 ## Comparaison des revenus moyens
 

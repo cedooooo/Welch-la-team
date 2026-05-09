@@ -9,9 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Cédric et Romane" />
+<meta name="author" content="Réalisé par Cédric et Romane pour Sorbonne Université" />
 
-<meta name="date" content="2026-05-04" />
 
 <title>Données</title>
 
@@ -269,14 +268,15 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Données</h1>
-<h4 class="author">Cédric et Romane</h4>
-<h4 class="date">2026-05-04</h4>
+<h4 class="author">Réalisé par Cédric et Romane pour Sorbonne
+Université</h4>
+<h4 class="date">Mai 2026</h4>
 
 </div>
 
 
-<p>Cette étude repose sur plusieurs jeux de données géographiques et
-statistiques permettant d’analyser les relations entre risques
+<p>Cette étude repose principalement sur 3 jeux de données géographiques
+et statistiques permettant d’analyser les relations entre risques
 industriels et inégalités socio-démographiques à Dunkerque.</p>
 <div id="données-vectorielles" class="section level2">
 <h2>Données vectorielles</h2>
@@ -287,38 +287,142 @@ permettant de délimiter la zone d’étude ;</li>
 <li>La localisation des installations industrielles à risque, issues de
 la base de données Géorisques.</li>
 </ul>
-<p>Ces données sont de nature géographique et permettent de représenter
-spatialement les éléments étudiés (polygones pour les communes, points
-pour les industries).</p>
-</div>
-<div id="données-socio-économiques" class="section level2">
-<h2>Données socio-économiques</h2>
-<p>Les données socio-économiques proviennent de l’INSEE et concernent le
-niveau de vie médian des populations à l’échelle des quartiers.</p>
-<p>Ces données, au format CSV, sont quantitatives continues et
-permettent d’analyser les inégalités de revenus sur le territoire
-étudié.</p>
-</div>
-<div id="nature-des-données" class="section level2">
-<h2>Nature des données</h2>
-<p>Les données mobilisées sont de plusieurs types :</p>
+<p>Ces données permettent de représenter spatialement les éléments
+étudiés (polygones pour les communes, points pour les industries).</p>
+<div id="données-administratives" class="section level3">
+<h3>Données administratives</h3>
+<p>Les limites communales ont été utilisées afin de délimiter le
+territoire d’étude et d’extraire spécifiquement la commune de Dunkerque.
+Ces données cadastrales proviennent de la plateforme Etalab, issues de
+la Direction générale des finances publiques.</p>
+<p>Les données étant déjà fournies dans le système de référence
+Lambert-93 (EPSG:2154) et elles ont simplement été utilisées comme
+couche de référence spatiale pour la délimitation de la commune de
+Dunkerque, et le filtrage des autres jeux de données.</p>
+<div
+style="background-color:#f5f5f5; padding:15px; border-left:5px solid #999;">
+<p><b>Caractéristiques :</b><br></p>
 <ul>
-<li>Données vectorielles : communes et installations industrielles
-;</li>
-<li>Données attributaires : revenus des populations ;</li>
-<li>Données quantitatives : niveau de vie médian ;</li>
-<li>Données qualitatives : type d’installations industrielles.</li>
-</ul>
-<p>Cette diversité de données permet de croiser des informations
-spatiales et statistiques dans une analyse SIG.</p>
-</div>
-<div id="sources-des-données" class="section level2">
-<h2>Sources des données</h2>
+<li>
+<p>Source : Direction générale des finances publiques (Etalab)</p>
+<li>
+<p>Format : Shapefile (.shp)</p>
+<li>
+<p>Type : polygone</p>
+<li>
+<p>Projection: Lambert-93</p>
 <ul>
-<li>INSEE : revenus, pauvreté et niveau de vie ;</li>
-<li>Géorisques : installations industrielles et rejets polluants ;</li>
-<li>Cadastre / données administratives : limites des communes.</li>
-</ul>
+</div>
+<div id="données-industrielles" class="section level3">
+<h3>Données industrielles</h3>
+<p>Les sites industriels proviennent d’OpenStreetMap, extraites via
+l’outil Overpass Turbo. Les objets industriels ont d’abord été récupérés
+sous forme polygonale, puis convertis en points pour faciliter les
+géo-traitements.</p>
+<p>Plusieurs traitements ont été nécessaires pour exploiter ces données
+; d’abord l’extraction des centroïdes des polygones industriels afin de
+représenter chaque site par un point ; puis la reprojection en
+Lambert-93 (EPSG:2154) pour être compatible avec les autres données.</p>
+<div
+style="background-color:#f5f5f5; padding:15px; border-left:5px solid #999;">
+<p><b>Caractéristiques :</b><br></p>
+<ul>
+<li>
+<p>Source : OpenStreetMap (Overpass Turbo)</p>
+<li>
+<p>Format : GeoJSON</p>
+<li>
+<p>Type : polygones (transformé en points)</p>
+<li>
+<p>Projection: WGS84 (transformé Lambert-93)</p>
+<ul>
+</div>
+<p><img src="CI/indus_zone.png" /> <em>Localisation des zones
+industrielles et des industries à Dunkerque</em></p>
+<details>
+<summary>
+<b>Afficher le code R utilisé</b>
+</summary>
+<pre class="r"><code>plot(st_geometry(dunkerque))
+plot(st_geometry(industries), add = TRUE, col = &quot;grey&quot;)
+plot(st_geometry(industries_points), add = TRUE, col = &quot;red&quot;, pch = 20)</code></pre>
+</details>
+<div id="données-statistiques-socio-économiques" class="section level2">
+<h2>Données statistiques socio-économiques</h2>
+<p>Les données socio-économiques de revenus proviennent de l’INSEE,
+concernent le niveau de vie médian des populations à l’échelle des
+quartiers et sont initialement fournies sous forme de tableau CSV. Il
+s’agit de données attributaires qui étaient fournies sous forme de
+carroyage déjà géoréférencé.</p>
+<div
+style="background-color:#f5f5f5; padding:15px; border-left:5px solid #999;">
+<p><b>Caractéristiques :</b><br></p>
+<ul>
+<li>
+<p>Source : INSEE</p>
+<li>
+<p>Format : CSV</p>
+<li>
+<p>Type : données attributaires</p>
+<li>
+<p>Variable étudiée : ind_snv (niveau de vie)</p>
+<ul>
+</div>
+<p><img src="CI/rev.png" /> <em>Répartition des niveau de vie à
+Dunkerque</em></p>
+<details>
+<summary>
+<b>Afficher le code R utilisé</b>
+</summary>
+<pre class="r"><code>brks &lt;- quantile(revenus_dk$ind_snv,
+                 probs = seq(0, 1, length.out = 6),
+                 na.rm = TRUE)
+
+cols &lt;- heat.colors(length(brks) - 1)
+
+classes &lt;- cut(revenus_dk$ind_snv,
+               breaks = brks,
+               include.lowest = TRUE)
+
+plot(st_geometry(dunkerque),
+     col = &quot;grey90&quot;,
+     border = &quot;black&quot;)
+
+plot(st_geometry(revenus_dk),
+     col = cols[classes],
+     pch = 20,
+     cex = 0.6,
+     add = TRUE)
+
+plot(st_geometry(dunkerque),
+     add = TRUE,
+     border = &quot;black&quot;,
+     lwd = 2)
+
+legend(&quot;bottomleft&quot;,
+       legend = paste0(round(brks[-length(brks)]), &quot; € - &quot;, round(brks[-1]), &quot; €&quot;),
+       fill = cols,
+       title = &quot;Somme des revenus (ind_snv)&quot;,
+       bty = &quot;n&quot;,
+       cex = 0.5)</code></pre>
+</details>
+<div id="liens-vers-les-données" class="section level2">
+<h2>Liens vers les données</h2>
+<p><a
+href="https://cadastre.data.gouv.fr/data/etalab-cadastre/2025-12-01/shp/departements/59/">Cadastre
+Etalab</a></p>
+<p><a
+href="https://www.insee.fr/fr/outil-interactif/7737357/map.html">Données
+INSEE (carroyage des revenus)</a></p>
+<p><a href="https://overpass-turbo.eu/s/2pkr">Overpass Turbo
+(localisation des industries)</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 

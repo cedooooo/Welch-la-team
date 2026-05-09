@@ -1,30 +1,67 @@
 ---
 title: "Méthodologie"
-author: "Cédric et Romane"
-date: "2026-05-04"
+author: "Réalisé par Cédric et Romane pour Sorbonne Université"
+date: "Mai 2026"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+![](CI/LEG.png)
+*Légende pour les Schémas de géo-traitement ci-dessous*
 
-## R Markdown
+## Préparation des données
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Les différentes données utilisées dans cette étude proviennent de sources hétérogènes (cadastre, INSEE, OSM). L’ensemble des couches a été reprojeté dans un système de coordonnées commun (Lambert-93, EPSG:2154), pour garantir la cohérence des géo-traitement et des analyses.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Traitement des données industrielles
 
-```{r cars}
-summary(cars)
-```
+![](CI/SGT_loc_indus.png)
 
-## Including Plots
+Les données industrielles issues d’OpenStreetMap ont été transformées afin de faciliter leur analyse spatiale.
 
-You can also embed plots, for example:
+Les polygones représentant les sites industriels ont été convertis en centroïdes pour simplifier leur localisation ponctuelle. Cette transformation permet une meilleure intégration dans les analyses de proximité et de densité.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+## Traitement des données de revenus
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+![](CI/SGT_carte_rev.png)
+
+Les données de revenus issues de l’INSEE ont été intégrées sous forme de carroyage statistique.
+
+Une transformation du système de coordonnées a été réalisée afin de les harmoniser avec les autres couches spatiales. Ces données ont ensuite été utilisées pour analyser la distribution des niveaux de vie sur le territoire de Dunkerque.
+
+## Analyses spatiales
+
+### Buffer industriels
+
+![](CI/SGT_buf.png)
+
+Les zones d’influence des industries ont été modélisées à l’aide de buffers de 1000 mètres autour des points industriels.
+
+### Raster de densité industrielle
+
+![](CI/SGT_rast_dens_indus.png)
+
+Une analyse de densité a été réalisée en rasterisant les points industriels pour mettre en évidence les zones de concentration.
+
+## Analyse croisée des revenus et des industries
+
+![](CI/ACC.png)
+
+Une analyse spatiale croisée a été réalisée afin d’étudier la relation entre la proximité des industries et les niveaux de revenus.
+
+Deux approches ont été utilisées :
+
+* une analyse par buffer (proximité)
+
+* une analyse par intersection spatiale (présence dans l’environnement industriel)
+
+Ces traitements ont permis de comparer les niveaux de revenus selon l’exposition aux zones industrielles.
+
+## Analyse par jointure spatiale
+
+![](CI/SGT_joiture.png)
+
+L’analyse par jointure spatiale permet de distinguer les carreaux situés à proximité d’au moins une industrie.
+Une différence moyenne de revenus est observée entre les deux groupes.

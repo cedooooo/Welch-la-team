@@ -9,9 +9,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Cédric et Romane" />
+<meta name="author" content="Réalisé par Cédric et Romane pour Sorbonne Université" />
 
-<meta name="date" content="2026-05-04" />
 
 <title>Méthodologie</title>
 
@@ -269,38 +268,79 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Méthodologie</h1>
-<h4 class="author">Cédric et Romane</h4>
-<h4 class="date">2026-05-04</h4>
+<h4 class="author">Réalisé par Cédric et Romane pour Sorbonne
+Université</h4>
+<h4 class="date">Mai 2026</h4>
 
 </div>
 
 
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting
-syntax for authoring HTML, PDF, and MS Word documents. For more details
-on using R Markdown see <a href="http://rmarkdown.rstudio.com"
-class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be
-generated that includes both content as well as the output of any
-embedded R code chunks within the document. You can embed an R code
-chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00</code></pre>
+<p><img src="CI/LEG.png" /> <em>Légende pour les Schémas de
+géo-traitement ci-dessous</em></p>
+<div id="préparation-des-données" class="section level2">
+<h2>Préparation des données</h2>
+<p>Les différentes données utilisées dans cette étude proviennent de
+sources hétérogènes (cadastre, INSEE, OSM). L’ensemble des couches a été
+reprojeté dans un système de coordonnées commun (Lambert-93, EPSG:2154),
+pour garantir la cohérence des géo-traitement et des analyses.</p>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="methodologie_files/figure-html/pressure-1.png" alt="" width="672" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the
-code chunk to prevent printing of the R code that generated the
-plot.</p>
+<div id="traitement-des-données-industrielles" class="section level2">
+<h2>Traitement des données industrielles</h2>
+<p><img src="CI/SGT_loc_indus.png" /></p>
+<p>Les données industrielles issues d’OpenStreetMap ont été transformées
+afin de faciliter leur analyse spatiale.</p>
+<p>Les polygones représentant les sites industriels ont été convertis en
+centroïdes pour simplifier leur localisation ponctuelle. Cette
+transformation permet une meilleure intégration dans les analyses de
+proximité et de densité.</p>
+</div>
+<div id="traitement-des-données-de-revenus" class="section level2">
+<h2>Traitement des données de revenus</h2>
+<p><img src="CI/SGT_carte_rev.png" /></p>
+<p>Les données de revenus issues de l’INSEE ont été intégrées sous forme
+de carroyage statistique.</p>
+<p>Une transformation du système de coordonnées a été réalisée afin de
+les harmoniser avec les autres couches spatiales. Ces données ont
+ensuite été utilisées pour analyser la distribution des niveaux de vie
+sur le territoire de Dunkerque.</p>
+</div>
+<div id="analyses-spatiales" class="section level2">
+<h2>Analyses spatiales</h2>
+<div id="buffer-industriels" class="section level3">
+<h3>Buffer industriels</h3>
+<p><img src="CI/SGT_buf.png" /></p>
+<p>Les zones d’influence des industries ont été modélisées à l’aide de
+buffers de 1000 mètres autour des points industriels.</p>
+</div>
+<div id="raster-de-densité-industrielle" class="section level3">
+<h3>Raster de densité industrielle</h3>
+<p><img src="CI/SGT_rast_dens_indus.png" /></p>
+<p>Une analyse de densité a été réalisée en rasterisant les points
+industriels pour mettre en évidence les zones de concentration.</p>
+</div>
+</div>
+<div id="analyse-croisée-des-revenus-et-des-industries"
+class="section level2">
+<h2>Analyse croisée des revenus et des industries</h2>
+<p><img src="CI/ACC.png" /></p>
+<p>Une analyse spatiale croisée a été réalisée afin d’étudier la
+relation entre la proximité des industries et les niveaux de
+revenus.</p>
+<p>Deux approches ont été utilisées :</p>
+<ul>
+<li><p>une analyse par buffer (proximité)</p></li>
+<li><p>une analyse par intersection spatiale (présence dans
+l’environnement industriel)</p></li>
+</ul>
+<p>Ces traitements ont permis de comparer les niveaux de revenus selon
+l’exposition aux zones industrielles.</p>
+</div>
+<div id="analyse-par-jointure-spatiale" class="section level2">
+<h2>Analyse par jointure spatiale</h2>
+<p><img src="CI/SGT_joiture.png" /></p>
+<p>L’analyse par jointure spatiale permet de distinguer les carreaux
+situés à proximité d’au moins une industrie. Une différence moyenne de
+revenus est observée entre les deux groupes.</p>
 </div>
 
 

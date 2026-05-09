@@ -1,27 +1,46 @@
 ---
 title: "Introduction"
-author: "Cédric et Romane"
-date: "2026-04-28"
+author: "Réalisé par Cédric et Romane pour Sorbonne Université"
+date: "Mai 2026"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+![](CI/loc_dunk_59.png)
+*Localisation de Dunkerque dans le département du Nord(59)*
 
-La ville de Dunkerque, ville la plus septentrionale de France concentre plus de 85 000 habitants. Située sur le littoral de la mer du Nord, la ville de Dunkerque constitue l’un des principaux pôles industrialo-portuaires de France. Arcelormittal, usines liées à la transformation des matières premières, métallurgie, les usines émettrices de GES sont nombreuses et le transport des matières ou des produits est également dangeux et très émetteur de GES. S’ajoutent à ces industries le poids de la centrale nucléaire Gravelines. Ces activités industrielles, bien qu’essentielles à l’économie locale, sont également à l’origine de risques environnementaux et technologiques.
 
-Par ailleurs, le territoire dunkerquois présente une forte diversité socio-démographique, avec des contrastes marqués entre les quartiers en termes de niveau de vie. Dans ce contexte, la question des différent niveau d'exposition des populations aux risques industriels se pose, et des questionnement d’inégalités socio-spatiales.
+La ville de Dunkerque, ville la plus septentrionale de France concentre plus de 85 000 habitants, ainsi que 35 industries. Située dans le département du Nord (59) sur le littoral de la mer du Nord, la ville de Dunkerque constitue l’un des principaux pôles industrialo-portuaires de France. Les gigentesque port, Arcelormittal (usines liées à la transformation des matières premières métallurgique) et autres usines très émettrices de GES sont nombreuses et le transport des matières ou des produits est également dangeux et émetteur de GES. S’ajoutent à ces industries le poids de la centrale nucléaire de Gravelines. Ces activités industrialo-portuaires, bien qu’essentielles à l’économie locale et national, sont également à l’origine de risques environnementaux et technologiques.
 
-# Problématique
+Par ailleurs, le territoire dunkerquois présente une forte diversité socio-démographique, avec des contrastes marqués entre les quartiers en termes de niveau de vie. Dans ce contexte, la question des différent niveaux d'exposition des populations aux risques industriels, et des questionnement d’inégalités socio-spatiales se pose.
 
-Dans quelle mesure les risques industriels influencent-ils la répartition socio-spatiale des populations à Dunkerque, et contribuent-ils à accentuer les inégalités socio-démographiques ?
+![](CI/loc_indus.png)
+*Localisation des industries dans Dunkerque*
 
-# Objectifs
+
+## Problématique
+
+Dans quelle mesure la proximité des zones industrielles influence-t-elle la répartition spaciale des revenues des populations dunkerquoises, et contribuent-ils à accentuer les inégalités socio-démographiques ?
+
+## Objectifs
+
+Nous allons :
+
+- localiser les principales zones industrielles de Dunkerque ;
+
+- cartographier la distribution spatiale des revenus ;
+
+- analyser les relations entre activités industrielles et niveaux de vie ;
+
+- identifier d’éventuelles corrélations territoriales.
 
 L’objectif de cette étude est d’analyser les relations entre la localisation des installations industrielles à risque et les caractéristiques socio-démographiques des populations dunkerquoises. On va notamment identifier si les populations les plus modestes sont davantage exposées à ces risques.
 
 Pour cela, une analyse spatiale sera réalisée en croisant des données géographiques (localisation des industries, limites administratives) et des données statistiques (niveau de vie des populations), afin de démontrer si il y a bien des inégalités socio-spatiales du fait des industries ou non.
+
+L’étude repose sur des traitements vectoriels et raster réalisés sous RStudio.
 
 ```{r}
 ```

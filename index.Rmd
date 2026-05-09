@@ -5,6 +5,26 @@ date: "Mai 2026"
 output: html_document
 ---
 
+<div style="
+background-image: url('CI/dk.jpg');
+height: 400px;
+background-size: cover;
+background-position: center;
+border-radius: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+text-shadow: 2px 2px 6px black;
+">
+
+<div style="text-align:center; background: rgba(0,0,0,0.45); padding:20px; border-radius:10px;">
+<h1>Industries et inégalités socio-spatiales à Dunkerque</h1>
+<p>Analyse spatiale des relations entre activité industrielle et répartition des revenus</p>
+</div>
+
+</div>
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```

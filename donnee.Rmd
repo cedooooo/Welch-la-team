@@ -20,7 +20,7 @@ Les données vectorielles utilisées comprennent :
 
 Ces données permettent de représenter spatialement les éléments étudiés (polygones pour les communes, points pour les industries).
 
-### Données administratives
+#### Données administratives
 
 Les limites communales ont été utilisées afin de délimiter le territoire d’étude et d’extraire spécifiquement la commune de Dunkerque. Ces données cadastrales proviennent de la plateforme Etalab, issues de la Direction générale des finances publiques.
 
@@ -51,7 +51,7 @@ Projection: Lambert-93
 
 </div>
 
-### Données industrielles
+#### Données industrielles
 
 Les sites industriels proviennent d’OpenStreetMap, extraites via l’outil Overpass Turbo. Les objets industriels ont d’abord été récupérés sous forme polygonale, puis convertis en points pour faciliter les géo-traitements.
 
